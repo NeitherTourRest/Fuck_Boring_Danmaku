@@ -1,0 +1,42 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+dist/
+build/
+
+# Conda environments
+envs/
+.conda/
+
+# ONNX external data (regenerated on export)
+*.data
+
+# Model checkpoints (regenerated)
+model/checkpoint/
+model/_train_runner.py
+model/_check_gpu.py
+model/regenerate.py
+model/fix_eval.py
+model/fix_eval2.py
+model/onnx_export.py
+model/onnx_v2.py
+model/onnx_v3.py
+model/export_new.py
+model/export_final.py
+model/make_icon.py
+model/check_tfjs.py
+model/_train_r.py
+
+# Crawled data (generated)
+danmaku_crawled.csv
+danmaku_labeled.json
+danmaku_dataset_final.json
+
+# Generated dataset
+danmaku_dataset.json
+
+# OS
+.DS_Store
+Thumbs.db

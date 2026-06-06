@@ -1,0 +1,29 @@
+{
+  "manifest_version": 3,
+  "name": "弹幕过滤器",
+  "version": "0.2.0",
+  "description": "基于关键词过滤 Bilibili 视频弹幕，拦截弱智弹幕",
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "action": {
+    "default_title": "弹幕过滤器",
+    "default_popup": "popup/popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*.bilibili.com/*"],
+      "js": ["content.js"],
+      "run_at": "document_start"
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["inject.js", "model_data/*"],
+      "matches": ["*://*.bilibili.com/*"]
+    }
+  ],
+  "permissions": ["storage"]
+}
